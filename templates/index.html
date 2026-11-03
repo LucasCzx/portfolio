@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="pt-BR" class="plain">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; base-uri 'none'; form-action 'none'; object-src 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="color-scheme" content="dark light">
+<meta name="description" content="Lucas OS: portfólio interativo de Lucas Carlos, estudante de TI no MédioTech SENAC RN.">
+<title>Lucas OS — Portfólio de Lucas Carlos</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%2314181e'/%3E%3Crect x='.75' y='.75' width='30.5' height='30.5' rx='8.5' fill='none' stroke='%2322d3ee' stroke-opacity='.55' stroke-width='1.5'/%3E%3Cpath d='M11.5 8.5v14.5h7' fill='none' stroke='%23e7ebf0' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='23' cy='22.6' r='2.1' fill='%23a3e635'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/estilo.css">
+<script src="js/preparacao-inicial.js"></script>
+<script src="js/idiomas.js" defer></script>
+<script src="js/sistema.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#desktop" data-i="sk">Ir para o conteúdo</a>
+
+<!-- Logotipo, ícones (traço de 1,8px, grade 24x24) e papéis de parede -->
+<svg class="defs" width="0" height="0" aria-hidden="true" focusable="false">
+  <symbol id="logo" viewBox="0 0 32 32"><rect width="32" height="32" rx="9" fill="#14181e"/><rect x=".75" y=".75" width="30.5" height="30.5" rx="8.5" fill="none" stroke="#22d3ee" stroke-opacity=".55" stroke-width="1.5"/><path d="M11.5 8.5v14.5h7" fill="none" stroke="#e7ebf0" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="23" cy="22.6" r="2.1" fill="#a3e635"/></symbol>
+  <symbol id="i-about" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-4 3.2-6 7-6s7 2 7 6"/></symbol>
+  <symbol id="i-projects" viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></symbol>
+  <symbol id="i-skills" viewBox="0 0 24 24"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></symbol>
+  <symbol id="i-journey" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></symbol>
+  <symbol id="i-terminal" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 10l3 2.5L7 15M13 15h4"/></symbol>
+  <symbol id="i-contact" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 7l8.5 6 8.5-6"/></symbol>
+  <symbol id="i-settings" viewBox="0 0 24 24"><path d="M4 7h8M18 7h2M4 17h2M12 17h8"/><circle cx="15" cy="7" r="2.2"/><circle cx="9" cy="17" r="2.2"/></symbol>
+  <symbol id="i-privacy" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/></symbol>
+  <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/></symbol>
+  <symbol id="i-min" viewBox="0 0 24 24"><path d="M6 12h12"/></symbol>
+  <symbol id="i-max" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="1.5"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M7 7l10 10M17 7L7 17"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6zM14 3v4h4"/></symbol>
+  <symbol id="i-page" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6zM14 3v4h4M9 12h6M9 16h6"/></symbol>
+  <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 16v-5a6 6 0 0 1 12 0v5l1.5 2h-15zM10 20a2 2 0 0 0 4 0"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></symbol>
+  <symbol id="i-restart" viewBox="0 0 24 24"><path d="M20 12a8 8 0 1 1-2.4-5.7M20 4v4h-4"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.2-4.2"/></symbol>
+  <symbol id="i-desktop" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M9 20h6M12 16v4"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h8"/></symbol>
+  <symbol id="i-ext" viewBox="0 0 24 24"><path d="M8 16L17 7M9 7h8v8"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5l11 7-11 7z"/></symbol>
+  <symbol id="i-calc" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2.5"/><path d="M8.5 7.5h7M9 12h.01M12 12h.01M15 12h.01M9 16h.01M12 16h.01M15 16h.01"/></symbol>
+  <symbol id="i-games" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="11" rx="5"/><path d="M8 10.5v4M6 12.5h4M16 11.5h.01M18 13.5h.01"/></symbol>
+  <symbol id="wp-mont" viewBox="0 0 1600 900"><circle class="sun" cx="1180" cy="290" r="82"/><circle class="halo" cx="1180" cy="290" r="130"/><path class="h1" d="M0 650L240 440l170 110 230-230 270 270 190-140 250 160 240-120v360H0z"/><path class="h2" d="M0 730l300-170 220 120 260-160 280 180 240-110 300 140v170H0z"/><path class="h3" d="M0 810c300-60 600 20 900-20s500-50 700 10v120H0z"/></symbol>
+  <symbol id="wp-dunas" viewBox="0 0 1600 900"><circle class="sun" cx="1230" cy="250" r="62"/><circle class="halo" cx="1230" cy="250" r="105"/><path class="h1" d="M0 600c300-90 600 40 900-20s500-90 700-10v330H0z"/><path class="h2" d="M0 700c300-60 700 60 1000 0s450-50 600 20v180H0z"/><path class="h3" d="M0 810c400-50 800 40 1200-10 150-20 300-20 400 10v100H0z"/></symbol>
+  <symbol id="wp-relevo" viewBox="0 0 1600 900"><path class="ln" d="M1010 450c0-120 190-170 340-110 170 70 210 220 80 310-130 90-350 50-410-50-20-40-10-100-10-150z"/><path class="ln" d="M1060 450c0-90 150-130 270-85 130 50 160 170 60 240-100 70-270 40-320-35-18-30-10-80-10-120z"/><path class="ln" d="M1110 452c0-60 110-90 200-60 90 35 110 110 40 160-70 45-190 25-228-25-12-22-12-50-12-75z"/><path class="ln2" d="M1160 455c0-35 70-50 120-35 50 20 60 60 20 90-40 25-110 15-130-15-8-12-10-25-10-40z"/><path class="ln" d="M-20 700c200-60 400 20 640-30s420-110 640-40 300 10 400-30"/><path class="ln" d="M-20 760c240-50 440 30 680-20s400-90 620-30 300 0 340-20"/><path class="ln" d="M-20 820c260-40 480 30 720-10s380-70 600-20 280 0 300-10"/></symbol>
+</svg>
+
+<main id="desktop">
+  <h1 class="sr">Lucas OS — portfólio de Lucas Carlos</h1>
+
+  <svg id="wall" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><use id="wu" href="#wp-mont"/></svg>
+
+  <nav class="icons" aria-label="Aplicativos" data-ia="aria-label:aria.apps">
+    <button class="ic" data-open="about"><span class="tile"><svg class="ico"><use href="#i-about"/></svg></span><span data-i="app.about">Sobre mim</span></button>
+    <button class="ic" data-open="projects"><span class="tile"><svg class="ico"><use href="#i-projects"/></svg></span><span data-i="app.projects">Projetos</span></button>
+    <button class="ic" data-open="skills"><span class="tile"><svg class="ico"><use href="#i-skills"/></svg></span><span data-i="app.skills">Habilidades</span></button>
+    <button class="ic" data-open="journey"><span class="tile"><svg class="ico"><use href="#i-journey"/></svg></span><span data-i="app.journey">Jornada</span></button>
+    <button class="ic" data-open="terminal"><span class="tile"><svg class="ico"><use href="#i-terminal"/></svg></span><span data-i="app.terminal">Terminal</span></button>
+    <button class="ic" data-open="contact"><span class="tile"><svg class="ico"><use href="#i-contact"/></svg></span><span data-i="app.contact">Contato</span></button>
+    <button class="ic" data-open="calc"><span class="tile"><svg class="ico"><use href="#i-calc"/></svg></span><span data-i="app.calc">Calculadora</span></button>
+    <button class="ic" data-open="games"><span class="tile"><svg class="ico"><use href="#i-games"/></svg></span><span data-i="app.games">Jogos</span></button>
+    <button class="ic" data-open="settings"><span class="tile"><svg class="ico"><use href="#i-settings"/></svg></span><span data-i="app.settings">Configurações</span></button>
+    <button class="ic" data-open="privacy"><span class="tile"><svg class="ico"><use href="#i-privacy"/></svg></span><span data-i="app.privacy">Privacidade e Segurança</span></button>
+  </nav>
+
+  <div class="mis">
+    <button id="mbtn" aria-expanded="false" aria-controls="missions"><svg class="ico"><use href="#i-target"/></svg><span data-i="mis.btn">Missões</span> <span id="mcount">0/4</span></button>
+    <div id="missions" hidden>
+      <h2 data-i="mis.title">Missões (opcionais)</h2>
+      <ul id="mlist"></ul>
+      <progress id="mp" max="4" value="0" aria-label="Progresso das missões" data-ia="aria-label:mis.bar"></progress>
+      <p id="mlast"><span data-i="mis.sec">Segredos opcionais:</span> <span id="scount">0/2</span>. <span data-i="mis.tip">Dica: o personagem e o relógio gostam de atenção.</span></p>
+    </div>
+  </div>
+
+  <p id="say" role="status"></p>
+  <button id="pet" aria-label="Personagem do Lucas OS. Clique para interagir." data-ia="aria-label:pet.aria">
+    <svg viewBox="0 0 120 150" aria-hidden="true" focusable="false">
+      <ellipse cx="60" cy="144" rx="34" ry="5" class="sh"/>
+      <path d="M26 142c0-30 14-48 34-48s34 18 34 48z" class="tee"/>
+      <path d="M48 96l12 14 12-14" class="collar"/>
+      <circle cx="60" cy="62" r="30" class="skin"/>
+      <path d="M30 58c0-22 14-34 32-33 17 1 28 13 28 33-8-9-18-13-30-13s-22 4-30 13z" class="hair"/>
+      <path d="M28 62a32 32 0 0 1 64 0" class="band"/>
+      <rect x="22" y="56" width="10" height="20" rx="5" class="cup"/>
+      <rect x="88" y="56" width="10" height="20" rx="5" class="cup"/>
+      <g class="eyes"><circle cx="49" cy="66" r="3.4"/><circle cx="71" cy="66" r="3.4"/></g>
+      <path d="M51 79q9 7 18 0" class="mouth"/>
+    </svg>
+  </button>
+
+  <section class="win" id="w-about" aria-labelledby="t-about" tabindex="-1">
+    <header class="bar"><svg class="ico"><use href="#i-about"/></svg><h2 id="t-about" data-i="app.about">Sobre mim</h2></header>
+    <div class="body">
+      <div class="prof"><svg class="logo big" aria-hidden="true"><use href="#logo"/></svg><div><strong class="pn">Lucas Carlos</strong><span class="note" data-i="a.role">Estudante de TI · MédioTech SENAC RN</span></div></div>
+      <p data-i="a.p1">Olá! Eu sou <strong>Lucas Carlos</strong>, estudante de Tecnologia da Informação no MédioTech SENAC RN.</p>
+      <p data-i="a.p2">Meu foco atual é <strong>programação e desenvolvimento web</strong>. No futuro, quero estudar segurança ofensiva ética, com interesse em <strong>Red Team</strong> e <strong>Web Pentest</strong>.</p>
+      <p data-i="a.p3">Valorizo disciplina, lógica, evolução e segurança. Meu objetivo é evoluir tecnicamente, construir uma carreira sólida em tecnologia e buscar uma oportunidade de estágio.</p>
+      <div class="acts">
+        <button class="btn" data-open="projects"><svg class="ico"><use href="#i-projects"/></svg><span data-i="a.proj">Ver projetos</span></button>
+        <button class="btn" data-open="contact"><svg class="ico"><use href="#i-contact"/></svg><span data-i="a.cont">Falar comigo</span></button>
+        <button class="btn" data-run="about"><svg class="ico"><use href="#i-terminal"/></svg><span data-i="a.term">Abrir no terminal</span></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="win" id="w-projects" aria-labelledby="t-projects" tabindex="-1">
+    <header class="bar"><svg class="ico"><use href="#i-projects"/></svg><h2 id="t-projects" data-i="t.projects">Projetos — ~/projetos</h2></header>
+    <div class="body explorer">
+      <ul class="files" aria-label="Arquivos" data-ia="aria-label:pr.files">
+        <li><button data-show="p1" aria-pressed="true"><svg class="ico"><use href="#i-file"/></svg>Gerador-de-senha</button></li>
+        <li><button data-show="p2" aria-pressed="false"><svg class="ico"><use href="#i-file"/></svg>Calculadora-Python</button></li>
+        <li><button data-show="p3" aria-pressed="false"><svg class="ico"><use href="#i-file"/></svg>Organizador-Financeiro</button></li>
+      </ul>
+      <div class="detail">
+        <article id="p1">
+          <h3 data-i="pr.1h">Gerador de Senhas</h3>
+          <p data-i="pr.1p">Gerador de senhas fortes e únicas em Python puro, sem dependências. Não pede dados pessoais e não guarda as senhas criadas. Tamanho de 12 a 64 caracteres.</p>
+          <p class="tags" data-i="pr.1t">Python · Segurança · Projeto de estudo</p>
+          <div class="acts"><a class="btn" href="https://github.com/LucasCzx/Gerador-de-senha" target="_blank" rel="noopener noreferrer"><span data-i="pr.gh">Ver no GitHub</span><svg class="ico"><use href="#i-ext"/></svg></a><button class="btn" data-copy><svg class="ico"><use href="#i-copy"/></svg><span data-i="copy">Copiar link</span></button></div>
+        </article>
+        <article id="p2">
+          <h3 data-i="pr.2h">Calculadora em Python</h3>
+          <p data-i="pr.2p">Calculadora simples feita para praticar lógica de programação, com adição, subtração, multiplicação e divisão.</p>
+          <p class="tags" data-i="pr.2t">Python 3 · Lógica</p>
+          <div class="acts"><a class="btn" href="https://github.com/LucasCzx/Calculadora-Python" target="_blank" rel="noopener noreferrer"><span data-i="pr.gh">Ver no GitHub</span><svg class="ico"><use href="#i-ext"/></svg></a><button class="btn" data-copy><svg class="ico"><use href="#i-copy"/></svg><span data-i="copy">Copiar link</span></button></div>
+        </article>
+        <article id="p3">
+          <h3 data-i="pr.3h">Organizador Financeiro</h3>
+          <p data-i="pr.3p">Controle de receitas, despesas e saldo direto no terminal, em Python puro. Os dados ficam só na memória e a entrada é validada.</p>
+          <p class="tags" data-i="pr.3t">Python 3 · Terminal · Validação de entrada</p>
+          <div class="acts"><a class="btn" href="https://github.com/LucasCzx/Organizador-Financeiro" target="_blank" rel="noopener noreferrer"><span data-i="pr.gh">Ver no GitHub</span><svg class="ico"><use href="#i-ext"/></svg></a><button class="btn" data-copy><svg class="ico"><use href="#i-copy"/></svg><span data-i="copy">Copiar link</span></button></div>
+        </article>
+        <div class="acts"><button class="btn" data-run="projects"><svg class="ico"><use href="#i-terminal"/></svg><span data-i="pr.term">Listar no terminal</span></button></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="win" id="w-skills" aria-labelledby="t-skills" tabindex="-1">
+    <header class="bar"><svg class="ico"><use href="#i-skills"/></svg><h2 id="t-skills" data-i="app.skills">Habilidades</h2></header>
+    <div class="body">
+      <h3 data-i="sk.h1">Na prática</h3>
+      <ul class="chips"><li>Python</li><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+      <h3 data-i="sk.h2">Estudando agora</h3>
+      <ul class="chips"><li>Linux</li><li>SQL</li><li data-i="sk.net">Redes de Computadores</li></ul>
+      <h3 data-i="sk.h3">Interesses futuros</h3>
+      <ul class="chips alt"><li>Red Team</li><li>Web Pentest</li></ul>
+      <p class="note" data-i="sk.note">Os interesses futuros ainda não são competências. Estou no começo dessa trilha.</p>
+      <div class="acts"><button class="btn" data-run="skills"><svg class="ico"><use href="#i-terminal"/></svg><span data-i="run">Rodar no terminal</span></button></div>
+    </div>
+  </section>
+
+  <section class="win" id="w-journey" aria-labelledby="t-journey" tabindex="-1">
+    <header class="bar"><svg class="ico"><use href="#i-journey"/></svg><h2 id="t-journey" data-i="app.journey">Jornada</h2></header>
+    <div class="body">
+      <ol class="steps">
+        <li data-i="j.1"><strong>Agora</strong>Estudante de TI no MédioTech SENAC RN.</li>
+        <li data-i="j.2"><strong>Construindo</strong>Projetos em Python publicados no GitHub e prática de HTML, CSS e JavaScript.</li>
+        <li data-i="j.3"><strong>Estudando</strong>Linux e SQL, além de Redes de Computadores.</li>
+        <li data-i="j.4"><strong>Próximo passo</strong>Buscar estágio e aprofundar o desenvolvimento web.</li>
+        <li data-i="j.5"><strong>Mais adiante</strong>Explorar segurança ofensiva ética: Red Team e Web Pentest.</li>
+      </ol>
+      <div class="acts"><button class="btn" data-run="journey"><svg class="ico"><use href="#i-terminal"/></svg><span data-i="run">Rodar no terminal</span></button></div>
+    </div>
+  </section>
+
+  <section class="win" id="w-terminal" aria-labelledby="t-terminal" tabindex="-1">
+    <header class="bar"><svg class="ico"><use href="#i-terminal"/></svg><h2 id="t-terminal" data-i="t.terminal">Terminal (simulado)</h2></header>
+    <div class="body term">
+      <div id="out" role="log" aria-live="polite"></div>
+      <div class="prompt"><label for="cmd">lucas@os:~$</label><input id="cmd" type="text" maxlength="40" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="send"></div>
+      <p class="note" data-i="te.note">Simulação com texto fixo. Não executa comandos reais. Setas ↑↓ mostram o histórico e Tab completa.</p>
+    </div>
+  </section>
+
+  <section class="win" id="w-contact" aria-labelledby="t-contact" tabindex="-1">
+    <header class="bar"><svg class="ico"><use href="#i-contact"/></svg><h2 id="t-contact" data-i="app.contact">Contato</h2></header>
+    <div class="body">
+      <p data-i="c.p">Este site não tem formulário. Fale comigo pelos links abaixo:</p>
+      <ul class="links">
+        <li><a href="https://www.linkedin.com/in/lucasczx/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><button class="btn" data-copy><svg class="ico"><use href="#i-copy"/></svg><span data-i="copy">Copiar link</span></button></li>
+        <li><a href="https://github.com/LucasCzx/" target="_blank" rel="noopener noreferrer">GitHub ↗</a><button class="btn" data-copy><svg class="ico"><use href="#i-copy"/></svg><span data-i="copy">Copiar link</span></button></li>
+      </ul>
+      <p class="note" data-i="c.tip">Dica: o LinkedIn pode pedir que você entre na sua conta antes de mostrar o perfil. Isso é regra dele, não deste site. Se preferir, veja meus projetos pelo GitHub.</p>
+    </div>
+  </section>
+
+  <section class="win" id="w-calc" aria-labelledby="t-calc" tabindex="-1">
+    <header class="bar"><svg class="ico"><use href="#i-calc"/></svg><h2 id="t-calc" data-i="app.calc">Calculadora</h2></header>
+    <div class="body calc">
+      <div class="cd"><span id="cexp" aria-hidden="true"></span><output id="cdisp" aria-live="polite">0</output></div>
+      <div class="ck" id="ckeys">
+        <button data-k="ac" class="fn" data-ia="aria-label:calc.ac">AC</button><button data-k="sign" class="fn" data-ia="aria-label:calc.sign">±</button><button data-k="pct" class="fn" data-ia="aria-label:calc.pct">%</button><button data-k="div" class="op" data-ia="aria-label:calc.div">÷</button>
+        <button data-k="7">7</button><button data-k="8">8</button><button data-k="9">9</button><button data-k="mul" class="op" data-ia="aria-label:calc.mul">×</button>
+        <button data-k="4">4</button><button data-k="5">5</button><button data-k="6">6</button><button data-k="sub" class="op" data-ia="aria-label:calc.sub">−</button>
+        <button data-k="1">1</button><button data-k="2">2</button><button data-k="3">3</button><button data-k="add" class="op" data-ia="aria-label:calc.add">+</button>
+        <button data-k="0" class="z">0</button><button data-k=".">,</button><button data-k="eq" class="eq" data-ia="aria-label:calc.eq">=</button>
+      </div>
+      <p class="note" data-i="calc.note">Você também pode usar o teclado: números, + − * / , Enter e Backspace.</p>
+    </div>
+  </section>
+
+  <section class="win" id="w-games" aria-labelledby="t-games" tabindex="-1">
+    <header class="bar"><svg class="ico"><use href="#i-games"/></svg><h2 id="t-games" data-i="app.games">Jogos</h2></header>
+    <div class="body games">
+      <div class="seg" role="group" aria-label="Jogos" data-ia="aria-label:app.games"><button class="btn" data-g="ttt" aria-pressed="true" data-i="g.ttt">Jogo da Velha</button><button class="btn" data-g="mem" aria-pressed="false" data-i="g.mem">Memória</button></div>
+      <div id="g-ttt" class="gp">
+        <p id="ttts" class="gs" role="status"></p>
+        <div id="tttb" class="tg" role="group" aria-label="Jogo da Velha" data-ia="aria-label:g.ttt"></div>
+        <div class="acts"><button class="btn" id="tttr"><svg class="ico"><use href="#i-restart"/></svg><span data-i="g.new">Novo jogo</span></button></div>
+      </div>
+      <div id="g-mem" class="gp" hidden>
+        <p id="mems" class="gs" role="status"></p>
+        <div id="memb" class="mb" role="group" aria-label="Memória" data-ia="aria-label:g.mem"></div>
+        <div class="acts"><button class="btn" id="memr"><svg class="ico"><use href="#i-restart"/></svg><span data-i="g.new">Novo jogo</span></button></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="win" id="w-settings" aria-labelledby="t-settings" tabindex="-1">
+    <header class="bar"><svg class="ico"><use href="#i-settings"/></svg><h2 id="t-settings" data-i="app.settings">Configurações</h2></header>
+    <div class="body">
+      <h3 data-i="s.appear">Aparência</h3>
+      <label class="opt"><input type="checkbox" id="s-light"> <span data-i="s.light">Tema claro</span></label>
+      <div class="row"><span id="l-acc" data-i="s.accent">Cor de destaque</span>
+        <div class="seg" role="group" aria-labelledby="l-acc"><button class="btn" data-acc="lime" aria-pressed="true" data-i="s.lime">Lima</button><button class="btn" data-acc="cy" aria-pressed="false" data-i="s.cyan">Ciano</button></div></div>
+      <div class="row col"><span id="l-wp" data-i="s.wp">Papel de parede</span>
+        <div class="wps" role="group" aria-labelledby="l-wp">
+          <button class="wpb" data-wp="mont" aria-pressed="true"><svg class="wpv" viewBox="0 0 1600 900" aria-hidden="true"><use href="#wp-mont"/></svg><span data-i="wp.mont">Montanhas</span></button>
+          <button class="wpb" data-wp="dunas" aria-pressed="false"><svg class="wpv" viewBox="0 0 1600 900" aria-hidden="true"><use href="#wp-dunas"/></svg><span data-i="wp.dunas">Dunas</span></button>
+          <button class="wpb" data-wp="relevo" aria-pressed="false"><svg class="wpv" viewBox="0 0 1600 900" aria-hidden="true"><use href="#wp-relevo"/></svg><span data-i="wp.relevo">Relevo</span></button>
+          <button class="wpb" data-wp="none" aria-pressed="false"><svg class="wpv" viewBox="0 0 1600 900" aria-hidden="true"></svg><span data-i="wp.none">Liso</span></button>
+        </div></div>
+      <div class="row"><span id="l-fs" data-i="s.fs">Tamanho do texto</span>
+        <div class="seg" role="group" aria-labelledby="l-fs"><button class="btn" data-fs="0" aria-pressed="true">A</button><button class="btn" data-fs="1" aria-pressed="false">A+</button><button class="btn" data-fs="2" aria-pressed="false">A++</button></div></div>
+
+      <h3 data-i="s.langh">Idioma</h3>
+      <div class="row"><label for="s-lang" data-i="s.lang">Idioma da interface</label>
+        <select id="s-lang"><option value="pt">Português (BR)</option><option value="en">English</option></select></div>
+
+      <h3 data-i="s.perf">Desempenho e acessibilidade</h3>
+      <label class="opt"><input type="checkbox" id="s-anim" checked> <span data-i="s.anim">Animações</span></label>
+      <label class="opt"><input type="checkbox" id="s-glass" checked> <span data-i="s.glass">Efeitos de vidro (transparência e desfoque)</span></label>
+      <label class="opt"><input type="checkbox" id="s-pet" checked> <span data-i="s.pet">Mostrar personagem</span></label>
+      <label class="opt"><input type="checkbox" id="s-sound"> <span data-i="s.sound">Sons de interface</span></label>
+      <label class="opt"><input type="checkbox" id="s-plain"> <span data-i="s.plain">Visão convencional (página simples)</span></label>
+
+      <h3 data-i="s.keys">Atalhos de teclado</h3>
+      <dl class="keys">
+        <dt><kbd>Alt</kbd>+<kbd>A</kbd></dt><dd data-i="k.menu">Abrir o menu Iniciar</dd>
+        <dt><kbd>Alt</kbd>+<kbd>1</kbd>…<kbd>9</kbd>, <kbd>0</kbd></dt><dd data-i="k.open">Abrir um aplicativo</dd>
+        <dt><kbd>Alt</kbd>+<kbd>N</kbd></dt><dd data-i="k.next">Próxima janela</dd>
+        <dt><kbd>Alt</kbd>+<kbd>W</kbd></dt><dd data-i="k.close">Fechar a janela ativa</dd>
+        <dt><kbd>Alt</kbd>+<kbd>M</kbd></dt><dd data-i="k.min">Minimizar a janela ativa</dd>
+        <dt><kbd>Alt</kbd>+<kbd>X</kbd></dt><dd data-i="k.max">Maximizar ou restaurar</dd>
+        <dt><kbd>Alt</kbd>+<kbd>D</kbd></dt><dd data-i="k.desk">Mostrar a área de trabalho</dd>
+        <dt><kbd>Alt</kbd>+<kbd>L</kbd></dt><dd data-i="k.lang">Alternar o idioma</dd>
+        <dt><kbd>←↑↓→</kbd></dt><dd data-i="k.move">Mover a janela (barra de título em foco)</dd>
+        <dt><kbd>Shift</kbd>+<kbd>←↑↓→</kbd></dt><dd data-i="k.size">Redimensionar a janela</dd>
+        <dt><kbd>Esc</kbd></dt><dd data-i="k.esc">Fechar menus e janelas</dd>
+      </dl>
+      <p class="note" data-i="s.note">As escolhas valem só nesta visita e não são salvas.</p>
+      <div class="acts"><button class="btn" id="s-reset"><svg class="ico"><use href="#i-restart"/></svg><span data-i="s.reset">Restaurar padrões</span></button></div>
+    </div>
+  </section>
+
+  <section class="win" id="w-privacy" aria-labelledby="t-privacy" tabindex="-1">
+    <header class="bar"><svg class="ico"><use href="#i-privacy"/></svg><h2 id="t-privacy" data-i="app.privacy">Privacidade e Segurança</h2></header>
+    <div class="body">
+      <h3 data-i="p.h1">Privacidade</h3>
+      <ul>
+        <li data-i="p.l1">Sem analytics, rastreadores, anúncios, cookies ou armazenamento no navegador.</li>
+        <li data-i="p.l2">Sem formulários: nada do que você digita (inclusive no Terminal) é enviado ou guardado.</li>
+        <li data-i="p.l3">O site não coleta IP nem localização. Só carrega arquivos do próprio site, sem bibliotecas externas.</li>
+        <li data-i="p.l4">O Render, que hospeda o site, pode processar dados técnicos de acesso conforme as políticas dele.</li>
+        <li data-i="p.l5">Os links de GitHub e LinkedIn abrem sites de terceiros, com as políticas deles.</li>
+      </ul>
+      <h3 data-i="p.h2">Segurança</h3>
+      <ul>
+        <li data-i="p.s1">Site estático, sem back-end, banco de dados ou login.</li>
+        <li data-i="p.s2">Política de segurança de conteúdo (CSP) bloqueia scripts e conexões de outras origens.</li>
+        <li data-i="p.s3">Textos dinâmicos usam <code>textContent</code>; não há <code>eval</code> nem execução dinâmica.</li>
+        <li data-i="p.s4">Links externos são validados e só abrem endereços HTTPS autorizados.</li>
+        <li data-i="p.s5">Alterar o código pelo F12 só afeta a sua própria aba. Nada é compartilhado com outros visitantes.</li>
+      </ul>
+      <h3 data-i="p.h3">Verificação ao vivo</h3>
+      <p id="pchk" class="chk"></p>
+      <p class="note" data-i="p.note">Nenhum site pode prometer segurança absoluta.</p>
+    </div>
+  </section>
+
+  <div id="menu" hidden role="dialog" aria-label="Menu de aplicativos" data-ia="aria-label:m.aria">
+    <div class="mh"><svg class="logo"><use href="#logo"/></svg><div><strong>Lucas OS</strong><span data-i="m.sub">Portfólio de Lucas Carlos</span></div></div>
+    <label class="srch"><svg class="ico"><use href="#i-search"/></svg><input id="msearch" type="search" placeholder="Buscar aplicativos…" autocomplete="off" spellcheck="false" aria-label="Buscar aplicativos" data-ia="placeholder:m.search"></label>
+    <ul>
+      <li><button class="mi" data-open="about"><svg class="ico"><use href="#i-about"/></svg><span class="mt"><strong data-i="app.about">Sobre mim</strong><small data-i="d.about">Quem sou e o que busco</small></span></button></li>
+      <li><button class="mi" data-open="projects"><svg class="ico"><use href="#i-projects"/></svg><span class="mt"><strong data-i="app.projects">Projetos</strong><small data-i="d.projects">Projetos em Python no GitHub</small></span></button></li>
+      <li><button class="mi" data-open="skills"><svg class="ico"><use href="#i-skills"/></svg><span class="mt"><strong data-i="app.skills">Habilidades</strong><small data-i="d.skills">Tecnologias e estudos</small></span></button></li>
+      <li><button class="mi" data-open="journey"><svg class="ico"><use href="#i-journey"/></svg><span class="mt"><strong data-i="app.journey">Jornada</strong><small data-i="d.journey">Trajetória e próximos passos</small></span></button></li>
+      <li><button class="mi" data-open="terminal"><svg class="ico"><use href="#i-terminal"/></svg><span class="mt"><strong data-i="app.terminal">Terminal</strong><small data-i="d.terminal">Comandos simulados</small></span></button></li>
+      <li><button class="mi" data-open="contact"><svg class="ico"><use href="#i-contact"/></svg><span class="mt"><strong data-i="app.contact">Contato</strong><small data-i="d.contact">GitHub e LinkedIn</small></span></button></li>
+      <li><button class="mi" data-open="calc"><svg class="ico"><use href="#i-calc"/></svg><span class="mt"><strong data-i="app.calc">Calculadora</strong><small data-i="d.calc">Contas do dia a dia</small></span></button></li>
+      <li><button class="mi" data-open="games"><svg class="ico"><use href="#i-games"/></svg><span class="mt"><strong data-i="app.games">Jogos</strong><small data-i="d.games">Jogo da Velha e Memória</small></span></button></li>
+      <li><button class="mi" data-open="settings"><svg class="ico"><use href="#i-settings"/></svg><span class="mt"><strong data-i="app.settings">Configurações</strong><small data-i="d.settings">Tema, papel de parede e idioma</small></span></button></li>
+      <li><button class="mi" data-open="privacy"><svg class="ico"><use href="#i-privacy"/></svg><span class="mt"><strong data-i="app.privacy">Privacidade e Segurança</strong><small data-i="d.privacy">Como o site trata dados</small></span></button></li>
+    </ul>
+    <p id="mnone" class="note" hidden data-i="m.none">Nenhum aplicativo encontrado.</p>
+    <div class="mf">
+      <button id="mlang" class="btn"><svg class="ico"><use href="#i-globe"/></svg><span id="mlcode">PT-BR</span></button>
+      <button id="mplain" class="btn"><svg class="ico"><use href="#i-page"/></svg><span data-i="m.plain">Visão convencional</span></button>
+      <button id="mrestart" class="btn"><svg class="ico"><use href="#i-restart"/></svg><span data-i="m.restart">Reiniciar</span></button>
+    </div>
+  </div>
+
+  <div id="nc" hidden role="dialog" aria-label="Notificações" data-ia="aria-label:nc.title">
+    <div class="nh"><strong data-i="nc.title">Notificações</strong><button id="nclear" class="btn" data-i="nc.clear">Limpar</button></div>
+    <ul id="nlist"></ul>
+    <p id="nempty" class="note" data-i="nc.empty">Nenhuma notificação.</p>
+  </div>
+  <div id="ctx" hidden role="menu"></div>
+</main>
+
+<div id="toasts" aria-live="polite" aria-atomic="false"></div>
+
+<div id="boot" hidden role="dialog" aria-modal="true" aria-label="Lucas OS" tabindex="-1">
+  <svg class="blogo" viewBox="0 0 32 32" aria-hidden="true"><rect class="bl-h" x=".75" y=".75" width="30.5" height="30.5" rx="8.5"/><path class="bl-l" d="M11.5 8.5v14.5h7"/><circle class="bl-c" cx="23" cy="22.6" r="2.1"/></svg>
+  <p class="bname">Lucas OS</p>
+  <div class="bbar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i></i></div>
+  <p id="bst" aria-live="polite"></p>
+  <div class="blang" role="group" aria-label="Language / Idioma"><button data-lang="pt" aria-pressed="true">PT-BR</button><button data-lang="en" aria-pressed="false">EN</button></div>
+  <p class="bskip" data-i="b.skip">Toque ou pressione uma tecla para pular</p>
+</div>
+
+<footer id="taskbar">
+  <button id="launch" class="start" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu de aplicativos" data-ia="aria-label:tb.launch"><svg class="logo"><use href="#logo"/></svg><span class="lbl">Lucas OS</span></button>
+  <div class="tbs" id="tbs" role="group" aria-label="Janelas abertas" data-ia="aria-label:tb.wins"></div>
+  <div class="tray">
+    <button id="plainbtn" class="tr" hidden aria-pressed="false" aria-label="Visão convencional" data-ia="aria-label:tb.plain"><svg class="ico"><use href="#i-page"/></svg><span class="lbl" data-i="m.plain">Visão convencional</span></button>
+    <button id="lang" class="tr"><svg class="ico"><use href="#i-globe"/></svg><span id="lcode">PT</span></button>
+    <button id="bell" class="tr" aria-expanded="false" aria-controls="nc" aria-label="Notificações" data-ia="aria-label:nc.title"><svg class="ico"><use href="#i-bell"/></svg><b id="nbadge" hidden>0</b></button>
+    <button id="desk" class="tr" aria-label="Mostrar área de trabalho" data-ia="aria-label:tb.desk"><svg class="ico"><use href="#i-desktop"/></svg></button>
+    <button id="clock" class="clock" aria-label="Hora e data atuais" data-ia="aria-label:tb.clock"><span id="ct">--:--</span><span id="cd"></span></button>
+  </div>
+</footer>
+</body>
+</html>

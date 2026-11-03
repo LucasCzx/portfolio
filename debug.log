@@ -1,0 +1,16 @@
+[1103/133407.171:ERROR:third_party\crashpad\crashpad\util\win\registration_protocol_win.cc:108] CreateFile: O sistema não pode encontrar o arquivo especificado. (0x2)
+[1103/133414.398:ERROR:third_party\crashpad\crashpad\client\crashpad_client_win.cc:867] not connected
+[1103/133421.456:ERROR:third_party\crashpad\crashpad\util\win\registration_protocol_win.cc:108] CreateFile: O sistema não pode encontrar o arquivo especificado. (0x2)
+[1103/133430.566:ERROR:third_party\crashpad\crashpad\util\win\registration_protocol_win.cc:108] CreateFile: O sistema não pode encontrar o arquivo especificado. (0x2)
+[1103/133431.853:ERROR:third_party\crashpad\crashpad\client\crashpad_client_win.cc:867] not connected
+[1103/133431.921:ERROR:third_party\crashpad\crashpad\util\win\registration_protocol_win.cc:108] CreateFile: O sistema não pode encontrar o arquivo especificado. (0x2)
+[1103/133433.520:ERROR:third_party\crashpad\crashpad\client\crashpad_client_win.cc:867] not connected
+[1103/133438.225:ERROR:third_party\crashpad\crashpad\util\win\registration_protocol_win.cc:108] CreateFile: O sistema não pode encontrar o arquivo especificado. (0x2)
+[1103/133439.499:ERROR:third_party\crashpad\crashpad\util\win\registration_protocol_win.cc:108] CreateFile: O sistema não pode encontrar o arquivo especificado. (0x2)
+[1103/133440.203:ERROR:third_party\crashpad\crashpad\client\crashpad_client_win.cc:867] not connected
+[1103/133440.295:ERROR:third_party\crashpad\crashpad\util\win\registration_protocol_win.cc:108] CreateFile: O sistema não pode encontrar o arquivo especificado. (0x2)
+[1103/133440.951:ERROR:third_party\crashpad\crashpad\client\crashpad_client_win.cc:867] not connected
+[1103/133440.992:ERROR:third_party\crashpad\crashpad\util\win\registration_protocol_win.cc:108] CreateFile: O sistema não pode encontrar o arquivo especificado. (0x2)
+[1103/133441.634:ERROR:third_party\crashpad\crashpad\client\crashpad_client_win.cc:867] not connected
+[1103/133441.710:ERROR:third_party\crashpad\crashpad\util\win\registration_protocol_win.cc:108] CreateFile: O sistema não pode encontrar o arquivo especificado. (0x2)
+[1103/133442.372:ERROR:third_party\crashpad\crashpad\client\crashpad_client_win.cc:867] not connected
